@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](intro-section-with-dropdown-navigation screenshot.png)
+![](screenshot.png)
 
 ### Links
 
