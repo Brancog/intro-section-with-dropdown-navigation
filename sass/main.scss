@@ -2,7 +2,46 @@
 @import "utilities";
 @import "nav";
 @import "header";
+@import "components";
+
+html {
+  // overflow-y: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
 
 body {
+  position: relative;
+  height: 100vh;
   font-family: $font-family-default;
+  background-color: $color-almost-white;
+  // font-size: $font-size-default;
+}
+
+.page-overlay {
+  position: absolute;
+  z-index: 10;
+  width: 40%;
+  height: 100%;
+  inset: 0;
+  background-color: $color-almost-black;
+  transition: $transition-default;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-cubic-bezier;
+}
+
+@media (min-width: 52.5em) {
+  .page-overlay {
+    display: none;
+  }
+}
+@media (min-width: 84.375em) {
+  body {
+    font-size: $font-size-default;
+  }
+}
+@media (min-width: 120em) {
+  body {
+    font-size: 1.3rem;
+  }
 }

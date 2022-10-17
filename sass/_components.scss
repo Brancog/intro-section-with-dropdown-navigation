@@ -1,0 +1,43 @@
+.cta-btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    color: $color-almost-white;
+    font-weight: $font-weight-bold;
+    // margin-top: calc(1rem + 2vh);
+    padding: 1rem 1.5rem;
+    border-radius: 1.1rem;
+    background-color: $color-almost-black;
+    border: 1px solid $color-almost-black;
+    transition: $transition-default;
+  }
+  &:hover {
+    color: $color-almost-black;
+    background-color: $color-almost-white;
+  }
+}
+
+.arrow-down {
+  margin-bottom: 1px;
+
+  transition: $transition-cubic-bezier;
+
+  &--mobile {
+    margin-left: 1rem;
+  }
+
+  &--desktop {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (min-width: 120em) {
+  .cta-btn {
+    &,
+    &:link,
+    &:visited {
+      padding: 1.2rem 2rem;
+    }
+  }
+}

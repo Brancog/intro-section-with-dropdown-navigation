@@ -1,0 +1,260 @@
+.navbar {
+  &--desktop {
+    display: none;
+    padding: 1rem 1rem;
+    gap: calc(1rem + 3vw);
+
+    &__wrap {
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__login-register {
+      gap: 2rem;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      color: $color-medium-gray;
+      transition: $transition-default;
+
+      &:hover {
+        color: $color-almost-black;
+        border-color: $color-almost-black;
+      }
+    }
+
+    &__main-links {
+      gap: 2rem;
+    }
+    &__btn--login {
+    }
+
+    &__btn--register {
+      padding: 0.7rem 1.4rem;
+      border-radius: 0.9rem;
+      border: 2px solid $color-medium-gray;
+      transition: $transition-default;
+
+      &:hover {
+        border-color: $color-almost-black;
+      }
+    }
+    &__logo-wrap {
+    }
+
+    &__logo {
+      width: 100%;
+      height: auto;
+    }
+
+    &__item {
+      position: relative;
+    }
+
+    // DESKTOP SUBMENU
+    &__submenu--features {
+      white-space: nowrap;
+      overflow: hidden;
+      position: absolute;
+      flex-direction: column;
+      gap: 1rem;
+      top: calc(1rem + 1vw);
+      right: 0;
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: $shadow-submenu-default;
+      transition: $transition-cubic-bezier;
+
+      a {
+        gap: 1rem;
+
+        img {
+          width: 1.1rem;
+          height: 1.1rem;
+        }
+      }
+    }
+    &__submenu--company {
+      white-space: nowrap;
+      overflow: hidden;
+      flex-direction: column;
+      gap: 1rem;
+      position: absolute;
+      top: calc(1rem + 1vw);
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: $shadow-submenu-default;
+      transition: $transition-cubic-bezier;
+    }
+  }
+  &--mobile {
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem 1rem;
+  }
+
+  &__logo-wrap {
+  }
+
+  &__logo {
+  }
+  &__logo-link {
+  }
+
+  &__menu-open {
+    position: absolute;
+    cursor: pointer;
+    right: 1rem;
+    transition: $transition-default;
+  }
+
+  &__menu-close {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    right: 1.2rem;
+    transition: $transition-default;
+  }
+}
+
+.nav-menu {
+  &__mobile {
+    transition: $transition-cubic-bezier;
+    overflow-y: scroll;
+    li {
+      list-style: none;
+    }
+    a {
+      color: $color-medium-gray;
+    }
+    position: absolute;
+    height: 100vh;
+    width: 60%;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: $color-almost-white;
+
+    &--links {
+      padding: 0 2rem;
+      margin-top: 5rem;
+    }
+
+    &--features-menu-toggle {
+      position: relative;
+    }
+
+    &--link-features {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &--link-company {
+      margin-top: 2rem;
+    }
+    &--link-careers {
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+    &--features-submenu {
+      flex-direction: column;
+      overflow: hidden;
+      margin-left: 2rem;
+      gap: 1.5rem;
+      transition: $transition-cubic-bezier;
+    }
+
+    &--company-submenu {
+      flex-direction: column;
+      margin-left: 2rem;
+      gap: 1.5rem;
+      overflow: hidden;
+      transition: $transition-cubic-bezier;
+    }
+    &--link-icon {
+      margin-right: 1rem;
+      transform: translateY(2px);
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+    &--link-text {
+      // font-size: 1.1rem;
+    }
+  }
+
+  &__buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 1rem;
+
+    a {
+      color: $color-medium-gray;
+    }
+
+    &--login {
+      &,
+      &:link,
+      &:visited {
+      }
+    }
+
+    &--register {
+      &,
+      &:link,
+      &:visited {
+        text-align: center;
+        border: 2px solid $color-medium-gray;
+        background-color: $color-almost-white;
+        border-radius: 1rem;
+        justify-content: stretch;
+        width: calc(100% - 3rem);
+        padding: 0.7rem 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 52.5em) {
+  .navbar--mobile {
+    display: none;
+    padding: 1rem 1rem 2rem 1rem;
+  }
+  .nav-menu__mobile {
+    display: none;
+  }
+  .navbar--desktop {
+    display: flex;
+
+    &__logo-wrap {
+      width: 6.5rem;
+    }
+  }
+}
+
+@media (min-width: 60.9375em) {
+  .navbar {
+    &--desktop {
+      padding: 1rem 2.5rem 3rem 2.5rem;
+    }
+  }
+}
+
+@media (min-width: 120em) {
+  .navbar {
+    &--desktop {
+      padding: 2rem;
+      &__logo-wrap {
+        width: 6.5rem;
+      }
+    }
+  }
+}

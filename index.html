@@ -19,9 +19,223 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <script defer src="main.js"></script>
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
+  <!-- DARKEN PAGE OVERLAY (MOBILE) -->
+  <div class="page-overlay"></div>
   <body>
-    <h1>hello</h1>
+    <nav class="navbar--desktop flex">
+      <a class="flex align-center navbar--desktop__logo-wrap" href=""
+        ><img class="navbar--desktop__logo" src="images/logo.svg" alt=""
+      /></a>
+
+      <div class="navbar--desktop__wrap flex align-center">
+        <ul class="navbar--desktop__main-links flex align-center">
+          <li class="navbar--desktop__item navbar--desktop__item--features">
+            <a
+              class="navbar--desktop__link navbar--desktop__link--features"
+              href="#"
+              ><span>Features</span
+              ><img
+                class="arrow-down arrow-down--desktop arrow-down--desktop--features"
+                src="images/icon-arrow-down.svg"
+                alt=""
+            /></a>
+            <ul class="navbar--desktop__submenu--features flex submenu-closed">
+              <li class="navbar--desktop__submenu-item">
+                <a class="flex align-center" href=""
+                  ><img src="images/icon-todo.svg" alt="Todo List" /><span
+                    >Todo List</span
+                  ></a
+                >
+              </li>
+              <li class="navbar--desktop__submenu-item">
+                <a class="flex align-center" href=""
+                  ><img src="images/icon-calendar.svg" alt="Calendar" /><span
+                    >Calendar</span
+                  ></a
+                >
+              </li>
+              <li class="navbar--desktop__submenu-item">
+                <a class="flex align-center" href=""
+                  ><img src="images/icon-reminders.svg" alt="Reminders" /><span
+                    >Reminders</span
+                  ></a
+                >
+              </li>
+              <li class="navbar--desktop__submenu-item">
+                <a class="flex align-center" href=""
+                  ><img src="images/icon-planning.svg" alt="Planning" /><span
+                    >Planning</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="navbar--desktop__item navbar--desktop__item--company">
+            <a
+              class="navbar--desktop__link navbar--desktop__link--company"
+              href="#"
+              ><span>Company</span
+              ><img
+                class="arrow-down arrow-down--desktop arrow-down--desktop--company"
+                src="images/icon-arrow-down.svg"
+                alt=""
+            /></a>
+            <ul class="navbar--desktop__submenu--company flex submenu-closed">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="">Careers</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+        <div class="navbar--desktop__login-register flex align-center">
+          <a class="navbar--desktop__btn--login" href="">Login</a>
+          <a class="navbar--desktop__btn--register" href="">Register</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE NAVBAR -->
+    <nav class="navbar--mobile flex" aria-label="mobile navbar">
+      <figure class="navbar__logo-wrap flex">
+        <a href="#" class="navbar__logo-link flex">
+          <img class="navbar__logo" src="images/logo.svg" alt="snap logo" />
+        </a>
+      </figure>
+      <img
+        class="navbar__menu-open"
+        src="images/icon-menu.svg"
+        alt="mobile menu toggle"
+      />
+      <img
+        src="images/icon-close-menu.svg"
+        alt="mobile menu toggle"
+        class="navbar__menu-close hidden"
+      />
+    </nav>
+    <!-- MOBILE MENU -->
+    <nav class="nav-menu__mobile" aria-label="mobile menu">
+      <ul class="nav-menu__mobile--links">
+        <li class="nav-menu__mobile--link-features">
+          <a class="nav-menu__mobile--features-menu-toggle" href="#"
+            ><span>Features</span
+            ><img
+              class="arrow-down arrow-down--mobile arrow-down--mobile--features"
+              src="images/icon-arrow-down.svg"
+              alt=""
+          /></a>
+          <ul class="nav-menu__mobile--features-submenu submenu-closed flex">
+            <li>
+              <a class="nav-menu__mobile--submenu-link" href="#">
+                <img
+                  class="nav-menu__mobile--link-icon"
+                  src="images/icon-todo.svg"
+                  alt="Todo"
+                /><span class="nav-menu__mobile--link-text">Todo List</span></a
+              >
+            </li>
+            <li>
+              <a class="nav-menu__mobile--submenu-link" href=""
+                ><img
+                  class="nav-menu__mobile--link-icon"
+                  src="images/icon-calendar.svg"
+                  alt="Calendar"
+                /><span class="nav-menu__mobile--link-text">Calendar</span></a
+              >
+            </li>
+            <li>
+              <a class="nav-menu__mobile--submenu-link" href=""
+                ><img
+                  class="nav-menu__mobile--link-icon"
+                  src="images/icon-reminders.svg"
+                  alt="Reminders"
+                /><span class="nav-menu__mobile--link-text">Reminders</span></a
+              >
+            </li>
+            <li class="">
+              <a class="nav-menu__mobile--submenu-link" href=""
+                ><img
+                  class="nav-menu__mobile--link-icon"
+                  src="images/icon-planning.svg"
+                  alt="Planning"
+                /><span class="nav-menu__mobile--link-text">Planning</span></a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-menu__mobile--link-company">
+          <a class="nav-menu__mobile--company-menu-toggle" href="#"
+            ><span>Company</span
+            ><img
+              src="images/icon-arrow-down.svg"
+              alt=""
+              class="arrow-down arrow-down--mobile arrow-down--mobile--company"
+          /></a>
+          <ul class="nav-menu__mobile--company-submenu submenu-closed flex">
+            <li>
+              <a href="" class="nav-menu__mobile--submenu-link">History</a>
+            </li>
+            <li>
+              <a href="" class="nav-menu__mobile--submenu-link">Our Team</a>
+            </li>
+            <li>
+              <a href="" class="nav-menu__mobile--submenu-link">Blog</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-menu__mobile--link-careers">
+          <a href="#">Careers</a>
+        </li>
+        <li class="nav-menu__mobile--link-about">
+          <a href="#">About</a>
+        </li>
+      </ul>
+      <div class="nav-menu__buttons flex">
+        <a href="" class="nav-menu__buttons--login">Login</a>
+        <a href="" class="nav-menu__buttons--register">Register</a>
+      </div>
+    </nav>
+
+    <header class="header flex">
+      <div class="header__image-wrap">
+        <picture>
+          <source
+            srcset="images/image-hero-desktop.png"
+            class="header-img--desktop"
+            media="(min-width: 1350px)"
+            alt="hero"
+          />
+          <img
+            class="header-img--mobile"
+            src="images/image-hero-mobile.png"
+            alt="hero"
+          />
+        </picture>
+      </div>
+      <section class="header__main-heading">
+        <h1>
+          Make <br />
+          remote work
+        </h1>
+        <p>
+          Get your team in sync,no matter your location. Streamline
+          processes,create team rituals,and watch productivity soar.
+        </p>
+        <a class="cta-btn" href="#">Learn more</a>
+        <div class="header__company-logos flex">
+          <img src="images/client-databiz.svg" alt="databiz company logo" />
+          <img
+            src="images/client-audiophile.svg"
+            alt="audiophile company logo"
+          />
+          <img src="images/client-meet.svg" alt="meet company logo" />
+          <img src="images/client-maker.svg" alt="maker company logo" />
+        </div>
+      </section>
+    </header>
   </body>
 </html>

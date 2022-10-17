@@ -1,0 +1,52 @@
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.submenu-closed {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  margin-top: -10rem;
+  transform: scale(0);
+}
+
+.submenu-open {
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin-top: 2rem;
+  transform: scale(1);
+}
+
+.desktop-submenu-open {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: scale(1);
+}
+
+.visible-overlay {
+  visibility: visible !important;
+  opacity: 0.8 !important;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.rotate-180deg {
+  transform: rotate(-180deg);
+}

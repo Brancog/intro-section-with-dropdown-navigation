@@ -3,8 +3,15 @@ $color-almost-white: hsl(0, 0%, 98%);
 $color-medium-gray: hsl(0, 0%, 41%);
 $color-almost-black: hsl(0, 0%, 8%);
 
+// SHADOWS
+$shadow-submenu-default: 0px 10px 42px -6px $color-medium-gray;
+
 // TYPOGRAPHY
 $font-size-default: 1.125rem;
 $font-family-default: "Epilogue", sans-serif;
 $font-weight-regular: 500;
 $font-weight-bold: 700;
+
+// DEFAULT TRANSITION
+$transition-default: all 0.3s ease;
+$transition-cubic-bezier: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
